@@ -82,7 +82,7 @@ export default function Dashboard({ currentUser }) {
             <div className="z-10 mb-4 md:mb-0">
                 <h1 className="text-2xl font-bold text-slate-100 tracking-wider flex items-center gap-3">
                     <i className="fa-solid fa-shield-virus text-cyan-400"></i>
-                    AURA COMMAND CENTER
+                    DIGITAL IDENTITY SHIELD COMMAND CENTER
                 </h1>
                 <p className="text-xs text-slate-400 font-mono mt-2 pl-8 border-l-2 border-cyan-500/50 ml-1">
                     Antivirus catches malware. <span className="text-cyan-400 font-bold">We catch you being used as malware.</span>
@@ -314,7 +314,7 @@ export default function Dashboard({ currentUser }) {
                             <div className="flex items-start gap-3 relative z-10 pl-4">
                                 <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_5px_green]"></div>
                                 <div className="flex-1">
-                                    <span className="text-green-400 font-bold">AURA:</span> Real-time pHash interception. Call blocked. Auto-DMCA filed.
+                                    <span className="text-green-400 font-bold">DIGITAL IDENTITY SHIELD:</span> Real-time pHash interception. Call blocked. Auto-DMCA filed.
                                 </div>
                             </div>
                         </div>
@@ -345,7 +345,7 @@ export default function Dashboard({ currentUser }) {
                             <div className="flex items-start gap-3 relative z-10 pl-4">
                                 <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-orange-500 shadow-[0_0_5px_orange]"></div>
                                 <div className="flex-1">
-                                    <span className="text-orange-400 font-bold">AURA:</span> Flagged across 14 nodes. Awaiting user consent for mass takedown.
+                                    <span className="text-orange-400 font-bold">DIGITAL IDENTITY SHIELD:</span> Flagged across 14 nodes. Awaiting user consent for mass takedown.
                                 </div>
                             </div>
                         </div>
@@ -361,27 +361,7 @@ export default function Dashboard({ currentUser }) {
             </div>
         </div>
 
-        {/* SYSTEM STATUS FOOTER */}
-        <footer className="mt-auto pt-5 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-500 font-mono gap-3">
-            <div className="flex flex-wrap justify-center sm:justify-start gap-6">
-                <span className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_5px_#22c55e]"></span> 
-                    Core Engine: Online
-                </span>
-                <span className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></span> 
-                    pHash DB: Synced
-                </span>
-                <span className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_5px_#06b6d4]"></span> 
-                    Last Takedown: 14m ago
-                </span>
-            </div>
-            <div>
-                AURA v2.4.1 // END OF REPORT
-            </div>
-        </footer>
-        
+
         <style dangerouslySetInnerHTML={{__html: `
             @keyframes scan {
                 0% { transform: translateY(0); }

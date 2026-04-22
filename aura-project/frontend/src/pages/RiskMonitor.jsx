@@ -138,7 +138,7 @@ export default function RiskMonitor() {
                                 <div className="flex items-start gap-3 relative z-10 pl-4">
                                     <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_5px_green]"></div>
                                     <div className="flex-1">
-                                        <span className="text-green-400 font-bold">AURA:</span> Real-time pHash interception. Call blocked. Auto-DMCA filed.
+                                        <span className="text-green-400 font-bold">DIGITAL IDENTITY SHIELD:</span> Real-time pHash interception. Call blocked. Auto-DMCA filed.
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@ export default function RiskMonitor() {
                                 <div className="flex items-start gap-3 relative z-10 pl-4">
                                     <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-orange-500 shadow-[0_0_5px_orange]"></div>
                                     <div className="flex-1">
-                                        <span className="text-orange-400 font-bold">AURA:</span> Flagged across 14 nodes. Awaiting user consent for mass takedown.
+                                        <span className="text-orange-400 font-bold">DIGITAL IDENTITY SHIELD:</span> Flagged across 14 nodes. Awaiting user consent for mass takedown.
                                     </div>
                                 </div>
                             </div>

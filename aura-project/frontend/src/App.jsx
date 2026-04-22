@@ -8,7 +8,7 @@ import RiskMonitor from './pages/RiskMonitor';
 import './App.css';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({ name: 'Guest User', email: 'guest@aura.com' });
+  const [currentUser, setCurrentUser] = useState({ name: 'Guest User', email: 'guest@aidetection.com' });
 
   return (
     <Router>
@@ -25,24 +25,7 @@ function App() {
             </div>
           </div>
           
-          <div className="status-indicators hidden md:flex gap-4 text-[10px] font-mono tracking-wider items-center">
-            <div className="status-pill flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></span>
-              <span>Vision API Cluster: Healthy (99.8%)</span>
-            </div>
-            <div className="status-pill flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></span>
-              <span>MongoDB: Synced (Last: 2s ago)</span>
-            </div>
-            <div className="status-pill flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></span>
-              <span>Takedown Network: Active (98%)</span>
-            </div>
-            <div className="status-pill flex items-center gap-2 text-red-400">
-              <i className="fa-solid fa-triangle-exclamation"></i>
-              <span>Active Alerts: 3 Critical / 8 Total</span>
-            </div>
-          </div>
+
 
           <div className="header-actions">
             <button className="icon-btn active-alert"><i className="fa-regular fa-bell"></i></button>
@@ -99,17 +82,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         
-        <footer className="app-footer">
-          <div className="footer-stats hidden md:flex">
-            <span><span className="dot green"></span> Vision API Cluster: 100%</span>
-            <span><span className="dot green"></span> MongoDB: Replicated</span>
-            <span><span className="dot cyan"></span> Global Takedown Network: 98% Active</span>
-            <span><span className="dot orange"></span> 3 Victim Personas Mapped</span>
-          </div>
-          <div className="footer-tech">
-            pHash • CLIP • Claude Vision • Privacy-first
-          </div>
-        </footer>
+
       </div>
     </Router>
   );

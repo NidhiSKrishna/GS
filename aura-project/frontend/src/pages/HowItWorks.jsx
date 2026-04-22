@@ -17,7 +17,7 @@ export default function HowItWorks() {
                     <span className="text-cyan-400">We catch you being used as malware.</span>
                 </h1>
                 <p className="text-slate-400 max-w-2xl text-sm leading-relaxed mb-8">
-                    AURA is a next-generation Digital Identity Shield. We protect your face, voice, and brand from being weaponized by deepfakes, unauthorized synthetic media, and identity theft across the public web and dark nets.
+                    DIGITAL IDENTITY SHIELD is a next-generation defense platform. We protect your face, voice, and brand from being weaponized by deepfakes, unauthorized synthetic media, and identity theft across the public web and dark nets.
                 </p>
                 <div className="flex gap-4">
                     <div className="bg-slate-800/50 border border-slate-700 px-4 py-2 rounded text-xs font-mono">
@@ -49,7 +49,7 @@ export default function HowItWorks() {
                     You upload your photos to establish a baseline. We do NOT store your images. Instead, we use advanced machine learning to extract a <span className="text-cyan-400 font-mono">non-reversible biometric pHash + CLIP signature</span>.
                 </p>
                 <div className="bg-slate-900/80 border border-slate-700 rounded p-3 text-xs font-mono text-slate-500 mt-auto">
-                    <span className="text-cyan-400">Result:</span> Even if AURA is fully compromised, attackers cannot reconstruct your face from the mathematical vector stored in our encrypted MongoDB cluster.
+                    <span className="text-cyan-400">Result:</span> Even if DIGITAL IDENTITY SHIELD is fully compromised, attackers cannot reconstruct your face from the mathematical vector stored in our encrypted MongoDB cluster.
                 </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function HowItWorks() {
                             Detections are populated directly into your personalized dashboard. Safe matches (like your own LinkedIn profile) are logged in your <span className="text-green-400 font-semibold">Consent History</span>. Malicious uses (like non-consensual explicit face-swaps or executive impersonation scams) are flagged as <span className="text-red-400 font-semibold">Critical Alerts</span>.
                         </p>
                         <p className="text-sm text-slate-400 leading-relaxed">
-                            With one click, AURA can trigger automated DMCA takedown requests across our global network to neutralize the threat before it spreads.
+                            With one click, DIGITAL IDENTITY SHIELD can trigger automated DMCA takedown requests across our global network to neutralize the threat before it spreads.
                         </p>
                     </div>
                     <div className="flex-1 bg-slate-900/80 border border-slate-700 rounded p-4 text-xs">
@@ -130,11 +130,11 @@ export default function HowItWorks() {
                             </div>
                             <div className="flex items-start gap-2">
                                 <i className="fa-solid fa-check text-green-500 mt-0.5"></i>
-                                <span className="text-slate-400">AURA finds <span className="font-bold text-cyan-400">manipulated</span> copies (face grafts, GANs, expression swaps).</span>
+                                <span className="text-slate-400">DIGITAL IDENTITY SHIELD finds <span className="font-bold text-cyan-400">manipulated</span> copies (face grafts, GANs, expression swaps).</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <i className="fa-solid fa-check text-green-500 mt-0.5"></i>
-                                <span className="text-slate-400">AURA monitors <span className="font-bold text-cyan-400">continuously</span>, not just when you execute a search.</span>
+                                <span className="text-slate-400">DIGITAL IDENTITY SHIELD monitors <span className="font-bold text-cyan-400">continuously</span>, not just when you execute a search.</span>
                             </div>
                         </div>
                     </div>
