@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Identity Shield</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation Bar -->
+        <header class="topbar">
+            <div class="logo-section">
+                <div class="shield-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="brand">
+                    <h1>DIGITAL IDENTITY SHIELD</h1>
+                    <span class="subtitle">ANTIVIRUS FOR YOUR FACE</span>
+                </div>
+            </div>
+            
+            <div class="status-indicators">
+                <div class="status-pill">
+                    <span class="dot green"></span>
+                    <span>Vision API – Online</span>
+                </div>
+                <div class="status-pill">
+                    <span class="dot green"></span>
+                    <span>MongoDB – Replicated</span>
+                </div>
+                <div class="status-pill">
+                    <span class="dot orange"></span>
+                    <span>3 Alerts Active</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn active-alert"><i class="fa-regular fa-bell"></i></button>
+                <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn"><i class="fa-solid fa-gear"></i></button>
+            </div>
+        </header>
+
+        <!-- Main Navigation Tabs -->
+        <nav class="main-nav">
+            <button class="nav-tab active" data-target="detect">DETECT</button>
+            <button class="nav-tab" data-target="identity-vault">IDENTITY VAULT</button>
+            <button class="nav-tab" data-target="track">TRACK</button>
+            <button class="nav-tab" data-target="risk-monitor">RISK MONITOR</button>
+            <button class="nav-tab" data-target="how-it-works">HOW IT WORKS</button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- DETECT TAB -->
+            <section id="detect" class="tab-content active">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h2>Don't detect deepfakes. <span class="cyan-text">Outrun them.</span></h2>
+                        <p>We find manipulated copies — faces grafted, expression-swapped, or AI-generated from scratch. Not just exact matches.</p>
+                    </div>
+                    <div class="hero-steps">
+                        <span class="step"><span class="step-num">01</span> Detect — AI manipulation flags</span>
+                        <span class="step"><span class="step-num">02</span> Match — facial signature</span>
+                        <span class="step"><span class="step-num">03</span> Track — continuous monitoring</span>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-title">THREATS FOUND</div>
+                        <div class="stat-value red">3</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">DEEPFAKES</div>
+                        <div class="stat-value orange">2</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">IDENTITY SAFE</div>
+                        <div class="stat-value green">91%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">TOTAL SCANS</div>
+                        <div class="stat-value cyan">47</div>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Deepfake Detector -->
+                    <div class="panel col-span-2">
+                        <h3 class="panel-heading"><i class="fa-solid fa-eye cyan-text"></i> DEEPFAKE DETECTOR</h3>
+                        <div class="upload-area">
+                            <div class="upload-box">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Upload Image</span>
+                                <span class="upload-sub">or drop file here</span>
+                            </div>
+                            <div class="upload-preview">
+                                <i class="fa-regular fa-user"></i>
+                                <span>No image</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Or paste image / profile URL..">
+                            <button class="btn-primary">SCAN</button>
+                        </div>
+                    </div>
+
+                    <!-- Identity Vault -->
+                    <div class="panel">
+                        <h3 class="panel-heading"><i class="fa-solid fa-lock cyan-text"></i> IDENTITY VAULT</h3>
+                        <div class="vault-status">
+                            <div class="avatar-ring green-glo">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Emma" alt="User" class="avatar">
+                            </div>
+                            <div class="lock-status green">
+                                <i class="fa-solid fa-lock"></i> FACE SCANNED & LOCKED
+                            </div>
+                            <p class="vault-desc">Non-reversible pHash stored.<br>No cannot reconstruct your photo.</p>
+                            <ul class="vault-details">
+                                <li><span>pHash stored</span> <span class="cyan-text">Yes</span></li>
+                                <li><span>Image stored</span> <span class="cyan-text">Never</span></li>
+                                <li><span>Enrolled</span> <span class="cyan-text">Jan 2025</span></li>
+                                <li><span>Signatures</span> <span class="cyan-text">3</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exposure Radar -->
+                    <div class="panel">
+                        <h3 class="panel-heading"><i class="fa-solid fa-crosshairs cyan-text"></i> EXPOSURE RADAR</h3>
+                        <div class="radar-content">
+                            <div class="radar-chart">
+                                <div class="radar-dot red" style="top: 20%; left: 30%;"></div>
+                                <div class="radar-dot orange" style="top: 50%; left: 60%;"></div>
+                                <div class="radar-dot red" style="top: 30%; left: 80%;"></div>
+                                <span class="radar-label red-text">Misuse detected</span>
+                                <span class="radar-label pull-right">4 locations</span>
+                                <div class="radar-arc arc-1"></div>
+                                <div class="radar-arc arc-2"></div>
+                                <div class="radar-arc arc-3"></div>
+                            </div>
+                            <div class="radar-platforms">
+                                <span class="platform-tag active">Twitter/X</span>
+                                <span class="platform-tag">Instagram</span>
+                                <span class="platform-tag">Reddit</span>
+                                <span class="platform-tag">Facebook</span>
+                            </div>
+                            <div class="progress-bars">
+                                <div class="bar-group">
+                                    <div class="bar-label"><span>Fake social profiles</span> <span class="red-text">70%</span></div>
+                                    <div class="bar-track"><div class="bar-fill red" style="width: 70%"></div></div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-label"><span>Deepfake media</span> <span class="orange-text">40%</span></div>
+                                    <div class="bar-track"><div class="bar-fill orange" style="width: 40%"></div></div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-label"><span>Unauthorised reposts</span> <span class="green-text">25%</span></div>
+                                    <div class="bar-track"><div class="bar-fill green" style="width: 25%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel list-panel">
+                    <h3 class="panel-heading">PREVIOUS SCANS</h3>
+                    <div class="scan-grid">
+                        <div class="scan-item">
+                            <div class="scan-meta"><span class="dot red"></span> 10:42 AM</div>
+                            <div class="scan-file">profile_photo_check.jpg</div>
+                            <div class="scan-result red-text">Potential Deepfake</div>
+                        </div>
+                        <div class="scan-item">
+                            <div class="scan-meta"><span class="dot green"></span> 09:15 AM</div>
+                            <div class="scan-file">event_photo_2024.png</div>
+                            <div class="scan-result green-text">Genuine</div>
+                        </div>
+                        <div class="scan-item">
+                            <div class="scan-meta"><span class="dot green"></span> 09:15 AM</div>
+                            <div class="scan-file">twitter.com/profile_x</div>
+                            <div class="scan-result green-text">Genuine</div>
+                        </div>
+                        <div class="scan-item">
+                            <div class="scan-meta"><span class="dot orange"></span> Yesterday</div>
+                            <div class="scan-file">instagram.com/acc123</div>
+                            <div class="scan-result orange-text">Suspicious</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACK TAB -->
+            <section id="track" class="tab-content">
+                <div class="bento-grid" style="grid-template-columns: 2fr 1fr;">
+                    <!-- Threat Map -->
+                    <div class="panel">
+                        <h3 class="panel-heading">GLOBAL THREAT MAP</h3>
+                        <div class="map-view">
+                            <div class="map-wave">
+                                <svg viewBox="0 0 800 200" preserveAspectRatio="none">
+                                    <path d="M0,100 C150,200 250,0 400,100 C550,200 650,0 800,100 L800,200 L0,200 Z" fill="none" stroke="rgba(0, 240, 255, 0.2)" stroke-width="2"/>
+                                    <path d="M0,120 C150,50 250,150 400,100 C550,50 650,150 800,100 L800,200 L0,200 Z" fill="none" stroke="rgba(0, 240, 255, 0.1)" stroke-width="2"/>
+                                </svg>
+                                <!-- Map nodes -->
+                                <div class="map-node red" style="top: 30%; left: 20%; box-shadow: 0 0 15px #FF3366;"></div>
+                                <div class="map-node red" style="top: 20%; left: 45%; box-shadow: 0 0 15px #FF3366;"></div>
+                                <div class="map-node orange" style="top: 60%; left: 60%; box-shadow: 0 0 15px #FF9900;"></div>
+                                <div class="map-node orange" style="top: 40%; left: 80%; box-shadow: 0 0 15px #FF9900;"></div>
+                            </div>
+                            <div class="map-stats">
+                                <div class="m-stat"><div class="val red-text">4</div><div class="lbl">Active threats</div></div>
+                                <div class="m-stat"><div class="val cyan-text">5</div><div class="lbl">Resolved</div></div>
+                                <div class="m-stat"><div class="val cyan-text">1.5M</div><div class="lbl">Global scans</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Alerts -->
+                    <div class="panel side-panel">
+                        <h3 class="panel-heading">ACTIVE ALERTS</h3>
+                        <div class="alert-list">
+                            <div class="alert-item border-red">
+                                <div class="alert-info">
+                                    <div class="title red-text"><span class="dot red"></span> Deepfake video — Twitter</div>
+                                    <div class="desc">Synthetic video • @fake_acc123</div>
+                                    <div class="time">Today 10:42 AM</div>
+                                </div>
+                                <button class="btn-outline-red">REPORT</button>
+                            </div>
+                            <div class="alert-item border-red">
+                                <div class="alert-info">
+                                    <div class="title red-text"><span class="dot red"></span> Fake profile — Twitter/X</div>
+                                    <div class="desc">91% face match • impersonation</div>
+                                    <div class="time">Yesterday 3:18 PM</div>
+                                </div>
+                                <button class="btn-outline-red">REPORT</button>
+                            </div>
+                            <div class="alert-item border-orange">
+                                <div class="alert-info">
+                                    <div class="title orange-text"><span class="dot orange"></span> Unauthorised repost — FB</div>
+                                    <div class="desc">Photo shared without consent</div>
+                                    <div class="time">2 days ago</div>
+                                </div>
+                                <button class="btn-outline-orange">REVIEW</button>
+                            </div>
+                             <div class="alert-item border-cyan">
+                                <div class="alert-info">
+                                    <div class="title cyan-text"><span class="dot cyan"></span> Weekly scan complete</div>
+                                    <div class="desc">44 images • 1 new match</div>
+                                    <div class="time">3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detection Stream -->
+                    <div class="panel col-span-2">
+                        <h3 class="panel-heading">DETECTION STREAM</h3>
+                        <table class="stream-table">
+                            <thead>
+                                <tr>
+                                    <th>TIME</th>
+                                    <th>PLATFORM</th>
+                                    <th>URL</th>
+                                    <th>CONFIDENCE</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Live</td>
+                                    <td>Twitter</td>
+                                    <td class="mono">twitter.com/fake_acc123</td>
+                                    <td class="red-text">98.5%</td>
+                                    <td><button class="btn-small border-red red-text">Takedown</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2m</td>
+                                    <td>Instagram</td>
+                                    <td class="mono">instagram.com/deepfake_page</td>
+                                    <td class="red-text">94.2%</td>
+                                    <td><button class="btn-small border-red red-text">Takedown</button></td>
+                                </tr>
+                                <tr>
+                                    <td>15m</td>
+                                    <td>Reddit</td>
+                                    <td class="mono">reddit.com/r/fraud/post_x</td>
+                                    <td class="orange-text">67%</td>
+                                    <td><button class="btn-small border-orange orange-text">Review</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1h</td>
+                                    <td>Facebook</td>
+                                    <td class="mono">fb.com/fake.profile.page</td>
+                                    <td class="orange-text">72%</td>
+                                    <td><button class="btn-small border-orange orange-text">Review</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="app-footer">
+                <div class="footer-stats">
+                    <span><span class="dot green"></span> Vision API Cluster: 100%</span>
+                    <span><span class="dot green"></span> MongoDB: Replicated</span>
+                    <span><span class="dot cyan"></span> Global Takedown Network: 98% Active</span>
+                    <span><span class="dot orange"></span> 3 Victim Personas Mapped</span>
+                </div>
+                <div class="footer-tech">
+                    pHash • CLIP • Claude Vision • Privacy-first
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

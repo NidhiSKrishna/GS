@@ -1,0 +1,214 @@
+AURA - Quick Command Reference
+==============================
+
+🚀 START APPLICATION
+
+Windows:
+  double-click start.bat
+  OR
+  start.bat
+
+Mac/Linux:
+  bash start.sh
+  OR
+  ./start.sh
+
+Manual (Both Terminals):
+  Terminal 1:
+    cd backend
+    npm start
+
+  Terminal 2:
+    cd frontend
+    npm run dev
+
+Development Mode (With Auto-Reload):
+  Terminal 1:
+    cd backend
+    npm run dev
+
+  Terminal 2:
+    cd frontend
+    npm run dev
+
+
+🌐 ACCESS POINTS
+
+Frontend:  http://localhost:5173
+Backend:   http://localhost:5000
+API Health: curl http://localhost:5000/
+
+
+🧪 TEST COMMANDS
+
+Backend Health:
+  curl http://localhost:5000/
+
+Deepfake Scan:
+  curl -X POST http://localhost:5000/scan -H "Content-Type: application/json" -d "{\"image\":\"test\"}"
+
+On Windows PowerShell:
+  Invoke-WebRequest http://localhost:5000/
+  Invoke-WebRequest http://localhost:5000/scan -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"image":"test"}'
+
+
+📦 INSTALL DEPENDENCIES
+
+Backend:
+  cd backend
+  npm install
+
+Frontend:
+  cd frontend
+  npm install
+
+Both:
+  cd backend && npm install
+  cd ../frontend && npm install
+
+
+🔨 BUILD FOR PRODUCTION
+
+Frontend:
+  cd frontend
+  npm run build
+  (Creates: frontend/dist/)
+
+Backend:
+  (Just use: npm start or node server.js)
+
+
+🛑 STOP SERVERS
+
+Linux/Mac:
+  Ctrl+C (twice if needed)
+
+Windows:
+  Ctrl+C
+  OR close the terminal window
+
+
+🔍 DEBUGGING
+
+View Backend Logs:
+  Check terminal where backend is running
+
+View Frontend Errors:
+  Press F12 in browser
+  Go to Console tab
+  Go to Network tab to see API calls
+
+Check if Port is in Use:
+  Windows:
+    netstat -ano | findstr :5000
+  
+  Mac/Linux:
+    lsof -i :5000
+
+
+⚡ USEFUL COMMANDS
+
+Check Node Version:
+  node --version
+
+Check npm Version:
+  npm --version
+
+Clear npm Cache:
+  npm cache clean --force
+
+Rebuild node_modules:
+  rm -rf node_modules package-lock.json
+  npm install
+
+Kill Process on Port 5000:
+  Windows:
+    netstat -ano | findstr :5000
+    taskkill /PID <PID> /F
+  
+  Mac/Linux:
+    lsof -i :5000
+    kill -9 <PID>
+
+
+📝 EDIT FILES
+
+Frontend API URL:
+  File: frontend/src/pages/Detect.jsx
+  Line: axios.post('http://localhost:5000/scan', ...)
+
+Backend Port:
+  File: backend/server.js
+  Line: const PORT = 5000;
+
+Tailwind Colors:
+  File: frontend/tailwind.config.js
+
+
+✨ QUICK TIPS
+
+1. Keep both terminals open while developing
+2. Frontend auto-reloads on save (Vite HMR)
+3. Backend needs restart if you change server.js
+4. Clear browser cache if styles don't update
+5. Check console for error messages
+6. Use DevTools Network tab to debug API calls
+
+
+🎯 EXPECTED OUTPUT
+
+Backend Startup:
+  🚀 AURA Backend Server running on http://localhost:5000
+  📝 API Endpoint: POST http://localhost:5000/scan
+  💻 Health Check: GET http://localhost:5000
+
+Frontend Startup:
+  VITE v8.0.4 ready in 234 ms
+  ➜ Local: http://localhost:5173/
+  ➜ Press q to quit
+
+
+💡 COMMON ISSUES & FIXES
+
+Port Already in Use:
+  Kill process using: taskkill /PID <number> /F (Windows)
+  Or: kill -9 <number> (Mac/Linux)
+  Or change port in server.js
+
+Module Not Found:
+  Run: npm install (in that directory)
+
+Blank Frontend Page:
+  Check console (F12)
+  Check if backend is running
+  Try: npm run dev (restart frontend)
+
+API Not Connecting:
+  Verify backend running on 5000
+  Check CORS in browser console
+  Check API URL in Detect.jsx
+
+
+📞 SUPPORT
+
+For issues, check:
+1. Terminal where server is running (error messages)
+2. Browser console (F12 → Console)
+3. Browser Network tab (see API responses)
+4. README.md for detailed documentation
+
+
+✅ VERIFY INSTALLATION
+
+1. Run: npm start (backend)
+2. Open new terminal: npm run dev (frontend)
+3. Open browser: http://localhost:5173
+4. Click Dashboard - should see 3 cards
+5. Click Detect - should see Scan button
+6. Click Scan - should see results after 1-2 seconds
+7. Success! 🎉
+
+
+🚀 You're Ready to Go!
+
+Start servers and visit http://localhost:5173

@@ -1,0 +1,196 @@
+AURA - AI Identity Protection System
+====================================
+
+QUICK START GUIDE
+
+=== SYSTEM REQUIREMENTS ===
+- Node.js v14 or higher (download from nodejs.org)
+- npm (comes with Node.js)
+- A modern web browser
+
+=== INSTALLATION ===
+
+1. Dependencies are already installed! But if you need to reinstall:
+
+   Backend:
+   cd backend
+   npm install
+
+   Frontend:
+   cd frontend
+   npm install
+
+=== RUNNING THE APPLICATION ===
+
+OPTION 1: Run Both Servers Simultaneously
+
+   Windows:
+   - Double-click: start.bat
+
+   Mac/Linux:
+   - Open terminal and run: bash start.sh
+
+OPTION 2: Run Servers Manually in Separate Terminals
+
+   Terminal 1 - Start Backend:
+   cd aura-project/backend
+   npm start
+   (Backend runs on http://localhost:5000)
+
+   Terminal 2 - Start Frontend:
+   cd aura-project/frontend
+   npm run dev
+   (Frontend runs on http://localhost:5173)
+
+OPTION 3: Development Mode with Hot Reload
+
+   Terminal 1 - Backend (with auto-restart):
+   cd aura-project/backend
+   npm run dev
+
+   Terminal 2 - Frontend (with Vite HMR):
+   cd aura-project/frontend
+   npm run dev
+
+=== TESTING THE APPLICATION ===
+
+1. Open your browser and navigate to: http://localhost:5173
+
+2. You should see the AURA interface with:
+   - Dark cybersecurity theme
+   - Navigation bar with "Dashboard" and "Detect" links
+
+3. Test Dashboard:
+   - Click "Dashboard" in the nav bar
+   - View 3 cards: Identity Status, Recent Scan, Risk Score
+
+4. Test Deepfake Detection:
+   - Click "Detect" in the nav bar
+   - Click "Scan Image" button
+   - Wait for the API call to complete
+   - You should see results with:
+     * Match % (random percentage)
+     * Deepfake Detection (Likely/Not Likely)
+     * Risk Level (Low/Medium/High with color coding)
+
+5. Test API Directly (Optional):
+   - Open another terminal and run:
+   
+   curl -X POST http://localhost:5000/scan -H "Content-Type: application/json" -d "{\"image\": \"test\"}"
+
+   - You should get back JSON with: match, deepfake, risk, timestamp, confidence
+
+=== FRONTEND FEATURES ===
+
+📊 Dashboard:
+   - Identity Status Card - shows "Safe" status
+   - Recent Scan Result - shows when last scan was performed
+   - Risk Score Card - displays overall risk level
+   - System info section
+
+🔍 Detect Page:
+   - Scan Image button
+   - Loading spinner while scanning
+   - Results card with:
+     * Match confidence bar
+     * Deepfake detection badge
+     * Risk level with color coding
+     * AI recommendations
+
+🎨 UI Highlights:
+   - Dark theme with blue/purple gradients
+   - Smooth animations and transitions
+   - Hover effects on cards
+   - Responsive design (works on mobile/tablet)
+   - Error handling with user-friendly messages
+
+=== BACKEND API ===
+
+Health Check:
+   GET http://localhost:5000/
+   Response: { message, status, version }
+
+Deepfake Scan:
+   POST http://localhost:5000/scan
+   Body: { image: "image-data" }
+   Response: {
+     match: "82%",
+     deepfake: "Likely",
+     risk: "High",
+     timestamp: "2026-04-18T10:30:00.000Z",
+     confidence: "0.95"
+   }
+
+=== TROUBLESHOOTING ===
+
+Backend won't start:
+   - Check if port 5000 is already in use
+   - Try: netstat -ano | findstr :5000 (Windows)
+   - Kill process using port 5000 or change port in server.js
+   - Ensure Node.js is installed: node --version
+
+Frontend shows blank page:
+   - Check browser console for errors (F12)
+   - Ensure backend is running on port 5000
+   - Try refreshing the page (Ctrl+R or Cmd+R)
+   - Clear browser cache
+
+API requests failing:
+   - Verify backend is running: curl http://localhost:5000/
+   - Check console for CORS errors
+   - Verify frontend URL is correct in Detect.jsx
+   - Check network tab in DevTools
+
+Dependencies issue:
+   - Delete node_modules folder
+   - Delete package-lock.json
+   - Run npm install again
+
+=== DEVELOPMENT NOTES ===
+
+Modify Frontend Colors:
+   - Edit: frontend/tailwind.config.js
+
+Change Backend Port:
+   - Edit: backend/server.js (line: const PORT = 5000;)
+   - Update frontend API URL in: frontend/src/pages/Detect.jsx
+
+Mock Data Customization:
+   - Edit backend/server.js POST /scan endpoint
+   - Change risk levels, detection results, etc.
+
+Add New Features:
+   - Frontend routes: Edit frontend/src/App.jsx
+   - Backend endpoints: Add new routes in backend/server.js
+   - Styling: Use Tailwind classes or edit frontend/src/App.css
+
+=== BUILD FOR PRODUCTION ===
+
+Frontend:
+   cd frontend
+   npm run build
+   (Creates optimized build in frontend/dist/)
+
+Backend:
+   Just use node server.js on your production server
+
+=== NEXT STEPS ===
+
+What you can add:
+   ✓ Real image upload functionality
+   ✓ Integration with real AI models
+   ✓ User authentication
+   ✓ Database integration
+   ✓ Scan history
+   ✓ Advanced analytics
+   ✓ Mobile app
+
+=== SUPPORT ===
+
+For issues:
+   1. Check backend terminal for errors
+   2. Open DevTools (F12) in browser
+   3. Check Network tab for API responses
+   4. Review console for error messages
+
+Enjoy using AURA! 🛡️
